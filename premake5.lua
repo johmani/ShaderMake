@@ -14,6 +14,7 @@ project "ShaderMakeBlob"
 	{
 		"include/ShaderMake/ShaderBlob.h",
 		"src/ShaderBlob.cpp",
+		"*.lua"
 	}
 
 	includedirs
@@ -64,6 +65,7 @@ project "ShaderMake"
 		"src/argparse.h",
 		"src/argparse.c",
 		"src/ShaderMake.cpp",
+		"*.lua"
 	}
 
 	includedirs
