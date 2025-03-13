@@ -1,4 +1,5 @@
 project "ShaderMakeBlob"
+	location (projectLocation)
 	kind "StaticLib"
 	language "C++"
 	cppdialect "C++20"
@@ -48,6 +49,7 @@ project "ShaderMakeBlob"
         symbols "Off"
 
 project "ShaderMake"
+	location (projectLocation)
 	kind "ConsoleApp"
 	language "C++"
 	cppdialect "C++20"
