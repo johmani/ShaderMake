@@ -1,14 +1,9 @@
 project "ShaderMakeBlob"
-	location (projectLocation)
 	kind "StaticLib"
 	language "C++"
 	cppdialect "C++20"
-	staticruntime "off"
 	warnings "Extra"
-	
 	fatalwarnings { "All" }
-
-	targetdir (libOutputDir)
     objdir (IntermediatesOutputDir)
 
 	files
@@ -35,31 +30,26 @@ project "ShaderMakeBlob"
 		pic "On"
 		systemversion "latest"
 
-	filter "configurations:Debug"
-		runtime "Debug"
-		symbols "on"
+    filter "configurations:Debug"
+        runtime "Debug"
+        symbols "On"
 
-	filter "configurations:Release"
-		runtime "Release"
-		optimize "on"
+    filter "configurations:Release"
+        runtime "Release"
+        symbols "On"
 
     filter "configurations:Dist"
-     	runtime "Release"
-     	optimize "Speed"
+        runtime "Release"
         symbols "Off"
 
 project "ShaderMake"
-	location (projectLocation)
 	kind "ConsoleApp"
 	language "C++"
 	cppdialect "C++20"
-	staticruntime "off"
 	warnings "Extra"
-	
 	fatalwarnings { "All" }
-
-	targetdir (binOutputDir)
     objdir (IntermediatesOutputDir)
+	targetdir (binOutputDir)
 
 	files
 	{
@@ -97,15 +87,14 @@ project "ShaderMake"
 		pic "On"
 		systemversion "latest"
 		
-	filter "configurations:Debug"
-		runtime "Debug"
-		symbols "On"
+    filter "configurations:Debug"
+        runtime "Debug"
+        symbols "On"
 
-	filter "configurations:Release"
-		runtime "Release"
-		optimize "On"
+    filter "configurations:Release"
+        runtime "Release"
+        symbols "On"
 
     filter "configurations:Dist"
-     	runtime "Release"
-     	optimize "Speed"
+        runtime "Release"
         symbols "Off"
